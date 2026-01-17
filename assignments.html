@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment Tracker</title>
+  <link rel="stylesheet" href="assignment.css">
+</head>
+<body>
+
+<div class="glass-container">
+  <h1>Assignment Submission Tracker</h1>
+
+  <table class="glass-table">
+    <thead>
+      <tr>
+        <th>S.No <button onclick="addRow()">+</button></th>
+        <th>Date of Submission <button onclick="addRow()">+</button></th>
+        <th>Subject <button onclick="addRow()">+</button></th>
+        <th>Task <button onclick="addRow()">+</button></th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <tr>
+        <td>1</td>
+        <td><input type="date"></td>
+        <td><input type="text" placeholder="Subject"></td>
+        <td><input type="text" placeholder="Task details"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="assignment.js"></script>
+</body>
+</html>

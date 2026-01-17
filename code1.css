@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color:#28282B ;
+    font-family: sans-serif;
+}
+#grid{
+    display: flex;          
+  flex-wrap: wrap;         
+  justify-content: center; 
+  gap: 20px;               
+  padding: 20px; 
+}
+.box{
+    height: 300px;
+    width:600px;
+    
+    border-radius: 10px;
+    flex-shrink: 0;
+    border: 1px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.box:hover {
+  transform: scale(1.05);       
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+}
+
+.box:not(#box1){
+    background-color:#33C3FF ;
+}
+
+
+
+
+#box1{
+    background-color: transparent;
+    background-image: url('https://i.pinimg.com/736x/03/cc/c3/03ccc3eece50b1c139854f064a8d88cb.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#box1 h1 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+#box2{
+    background-color: transparent;
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2025/08/Stars-Wallpaper-free-download.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#box2 h1 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+#box3{
+    background-color: transparent;
+    background-image: url('https://i.pinimg.com/236x/93/18/6f/93186face400b0a0bf50b97d0c50b08c.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#box3 h1 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+#box4{
+    background-color: transparent;
+    background-image: url('https://i.pinimg.com/236x/9d/d8/14/9dd8144cc08a2c781b61bf169a121d5b.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#box4 h1 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+#box5{
+    background-color: transparent;
+    background-image: url('https://i.pinimg.com/236x/44/ee/8b/44ee8b4d9e67bf797fa71eaf56e92377.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#box5 h1 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+#box6{
+    background-color: transparent;
+    background-image: url('https://i.pinimg.com/originals/3a/b9/2b/3ab92ba018c2efbbb55921365f4b6be1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#box6 h1 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}

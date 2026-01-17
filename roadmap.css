@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+/* Solar system container */
+.solar-system {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+}
+
+/* Sun */
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #FFD700, #FFA500);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px #FFD700;
+}
+
+/* Orbits */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform-origin: center;
+    animation: spin linear infinite;
+}
+
+/* Individual orbit sizes */
+.orbit1 { width: 200px; height: 200px; animation-duration: 6s; }
+.orbit2 { width: 300px; height: 300px; animation-duration: 10s; }
+.orbit3 { width: 400px; height: 400px; animation-duration: 14s; }
+.orbit4 { width: 500px; height: 500px; animation-duration: 18s; }
+.orbit5 { width: 600px; height: 600px; animation-duration: 22s; }
+.orbit6 { width: 700px; height: 700px; animation-duration: 26s; }
+
+/* Planets */
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) translateX(calc(var(--orbit-radius)));
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+/* Planet colors */
+.planet1 { background: #FF5733; --orbit-radius: 100px; }
+.planet2 { background: #33FF57; --orbit-radius: 150px; }
+.planet3 { background: #3357FF; --orbit-radius: 200px; }
+.planet4 { background: #F333FF; --orbit-radius: 250px; }
+.planet5 { background: #33FFF5; --orbit-radius: 300px; }
+.planet6 { background: #FFF533; --orbit-radius: 350px; }
+
+/* Spin animation */
+@keyframes spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Stop on hover */
+.solar-system:hover .orbit {
+    animation-play-state: paused;
+}
+.planet1{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/960px-HTML5_logo_and_wordmark.svg.png');
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+.planet2{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/960px-CSS3_logo.svg.png');
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+.planet3{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png');
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+.planet4{
+    background-image: url('https://images.seeklogo.com/logo-png/35/1/tailwind-css-logo-png_seeklogo-354675.png');
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+.planet5{
+    background-image: url('https://images.seeklogo.com/logo-png/27/1/node-js-logo-png_seeklogo-273749.png');
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+.planet6{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7ECW4xHgJyeIQexegqGhxgHGknkobmD0xA&s');
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+.sun{
+    background-image: url('https://codeflies.com/wp-content/uploads/2019/09/blog-4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}

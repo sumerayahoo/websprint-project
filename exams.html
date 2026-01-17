@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Examination Planner</title>
+  <link rel="stylesheet" href="exams.css">
+</head>
+<body>
+
+<div class="glass-container">
+  <h1>Examination Planner</h1>
+
+  <table class="glass-table">
+    <thead>
+      <tr>
+        <th>S.No <button onclick="addRow()">+</button></th>
+        <th>Date of Examination <button onclick="addRow()">+</button></th>
+        <th>Subject <button onclick="addRow()">+</button></th>
+        <th>Portion to be Completed <button onclick="addRow()">+</button></th>
+      </tr>
+    </thead>
+
+    <tbody id="table-body">
+      <tr>
+        <td>1</td>
+        <td><input type="date"></td>
+        <td><input type="text" placeholder="Subject"></td>
+        <td><input type="text" placeholder="Portion details"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="exams.js"></script>
+</body>
+</html>
