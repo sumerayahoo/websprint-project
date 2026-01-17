@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  background: #0b0b0b;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+#particleCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.grid {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+
+/* FULL PAGE GRID */
+#grid {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  gap: 0;
+  padding: 0;
+  
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* EACH TILE */
+.box {
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+  border-radius: 1px;
+  
+}
+
+/* FLIP CARD */
+.box::before,
+.box::after {
+  inset: 0;
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  backface-visibility: hidden;
+  
+  
+  transition: transform 0.8s cubic-bezier(0.1, 0.4, 0.4, 2);
+  
+}
+
+/* FRONT */
+.box::before {
+  background: linear-gradient(135deg,#28282B,#28282B);
+  transform: rotateY(0deg);
+}
+
+/* BACK */
+.box::after {
+  background: linear-gradient(135deg,#CCFF33, #CCFF33);
+  transform: rotateY(180deg);
+}
+
+/* HOVER EFFECT */
+.box:hover::before {
+  transform: rotateY(180deg);
+}
+
+.box:hover::after {
+  transform: rotateY(360deg);
+}
+.subtitle {
+  position: relative;          /* Stay on screen */
+  top: 60%;                 /* Adjust vertical position as needed */
+  left: 50%;                /* Center horizontally */
+  transform: translate(-50%, -50%);
+  color: #fff;              /* Neon white */
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;        /* Adjust size */
+  letter-spacing: 1px;
+  text-align: center;
+  pointer-events: none;     /* Let mouse pass through */
+  z-index: 10;
+  
+  
+}
+.intro:hover{
+    opacity: 0.5;
+}
+.intro{
+     position: relative;          /* Stay on screen */
+  top: 65%;                 /* Adjust vertical position as needed */
+  left: 50%;                /* Center horizontally */
+  transform: translate(-50%, -50%);
+  color:#CCFF33 ; 
+  background-color: #28282B;             /* Neon white */
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;        /* Adjust size */
+  letter-spacing: 1px;
+  text-align: center;
+    
+  z-index: 10;
+  width: 500px;
+  height: 100px;
+}
